@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Drivers of carbon storage in freshwater wetlands in Victoria
 
@@ -68,3 +69,7 @@ Special thank you to [James Camac](https://github.com/jscamac) for assistance in
 
 ## Problems?
 If you have any problems getting the workflow to run please create an [issue](https://github.com/smwindecker/vic.carbon/issues) and I will endevour to remedy it ASAP.
+=======
+# vic.carbon
+Repository for drivers of Victorian freshwater carbon project
+>>>>>>> origin/master
