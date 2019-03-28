@@ -1,0 +1,12 @@
+\chapter{Drivers of soil carbon storage in freshwater wetlands of south eastern Australia}\label{sec:carbon}
+\newpage
+
+\begin{localsize}{11}
+\section*{\centering Abstract}
+
+Freshwater wetlands are globally significant reservoirs of soil carbon. Landscape level predictions require consistent approaches to modelling soil carbon stock at depth and a better understanding of how environmental variables affect carbon stock. Despite the limitations of our understanding of these variables, efforts to classify the carbon storage potential of freshwater wetlands often rely on studies that are based on only a few sites and a limited number of site-specific samples. In this study, we use (i) soil carbon data measured from 100 wetlands in Victoria, southeastern Australia, to quantify soil carbon stock and (ii) spatially-explicit environmental data to test how well they predict carbon stock. We demonstrate how hierarchical modelling of soil carbon density can be used to estimate the total carbon stock of a wetland. We find that environmental variables such as precipitation and Normalised Difference Vegetation Index (NDVI) influence carbon stock at new sites, but predictive accuracy varied between sites. Diverse biota and inundation conditions have a big impact on carbon storage but are difficult to quantify with spatial data. Landscape scale modelling and out-of-sample prediction to new sites provide a useful framework for future studies. 
+
+\end{localsize}
+
+\newpage
+\Sexpr{knitr::knit_child('body.Rnw')}

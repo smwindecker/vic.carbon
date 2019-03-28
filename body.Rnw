@@ -1,0 +1,144 @@
+\section{Introduction}
+
+Carbon stored in wetland soil contribute substantially to the amount of carbon stored globally. Wetland systems hold 20\textemdash30 \% of all terrestrial carbon \citep{lal2007,mitra2005}. Soil organic carbon density depends on relative rates of carbon import via litter deposition from primary production and carbon export via soil microbial and microfaunal respiration from decomposition. Tidal ecosystems store more carbon per unit area than freshwater wetlands, becuase saline conditions and high exogenous flows quickly and densely accumulate carbon in soil \citep{chmura2003,ewerslewis2018,macreadie2017}. However, freshwater wetlands cannot be ignored despite their slower rates of soil carbon accumulation. Despite occupying globally only 5\textemdash8 \% of land area \citep{mitsch2007}, they are estimated to hold up to ten times more carbon globally than tidal wetlands \citep{nahlik2016} due to their wider extent. 
+
+Carbon storage rates in freshwater wetlands vary dramatically both among and within wetlands \citep{pearse2018} due to the diverse biota and inundation conditions found across sites \citep{mitra2005,mcleod2011}. There is a critical need to understand how environmental factors drive the accumulation of carbon in freshwater wetlands in order to predict carbon storage on a sclobal scale, but existing studies of carbon storage in freshwater wetlands are mostly limited to small-scale or site-specific comparisons \citep{bernal2012,villa2015}. Further, many studies contradict one another with respect to exactly how hydro-geomorphology and vegetation affect carbon storage. \citet{bernal2012} found that carbon stocks were higher in depressional wetlands than riverine ones in a temperate climate, but found the reverse to be true in a follow-up study in the tropics \citep{bernal2013}. Others have noted no difference between estuarine, depressional, and perilacustrine wetlands \citep{marin-muniz2014}. We may expect hydrogeomorphic attributes such as duration of flooding to affect soil carbon via inhibition of decomposition, but inundation alone is an insufficient predictor \citep{villa2015}. State- and region-wide wetland inventories are necessary for us to understand how carbon is distributed and accumulated. 
+
+Some recent large-scale studies have begun to address this gap in our understanding of underlying mechanisms of carbon storage in wetlands \citep{nahlik2016,carnell2018}. However, these studies tend to rely upon broad classification of sites by region and/or wetland type. Although wetland classifications often incorporate aspects of both hydro-geomorphology and relevant plant community, they are far from uniform across the globe \citep{brinson1993,cowardin1979}. Any broad-scale prediction therefore must rely on the assumption that wetlands of the same type exhibit the same carbon storage potential, but under vastly different conditions. The U.S. Army Corps of Engineers uses the Brinson classification system \citep{brinson1993}, which separates wetlands by geomorphology (depressional, riverine, fringe, or peat), water supply (precipitation, groundwater-fed, or surface-fed), and water flow (vertical, unidirectional, or bidirectional). This multifaceted approach contrasts with the U.S Fish and Wildlife Service, which use the Cowardin classification system. This system distinguishes broadly between marine, estuarine, riverine, palustrine, and lacustrine systems \citep{cowardin1979}. In the state of Victoria, Australia, research agencies tend to use the Corrick and Norman scheme, which combines inundation and vegetation categories into classes such as `deep freshwater marsh' and `shallow herbland' \citep{corrick1980}. Given how diverse classification systems are, both between and within countries, categorising carbon storage by these broad criteria might mask finer scale variability in actual drivers of carbon storage. Well-supported models of carbon stocks using globally available spatial data, such as conducted for coastal wetlands \citep{sanderman2018}, could enable prediction for areas which have similar soil carbon dynamics but where no sampling has taken place. 
+
+In this study, we model influence of landscape-scale environmental factors that drive the soil carbon stock among a network of inland wetlands in the state of Victoria, Australia (covering more than 200,000 $km^2$). We collected soil cores in 100 of these wetlands (across 10 management regions and six wetland categories), analysed the percentage of organic carbon \citetext{previously reported in \citep{carnell2018}}, estimated carbon stock using a hierarchical generalised additive model, and finally built a model of carbon stock using a number of continuous environmental variables. We wanted to determine whether sites differ in their vertical profiles with depth and to generate an integrated stock assessment using these site-specific profiles. We sought to determine what might influence variation in carbon stock and to evaluate how well continuous environmental variables could predict carbon stock in out-of-sample sites.
+
+\section{Materials and Methods}
+
+\subsection*{Sample collection}
+
+This study was conducted in inland wetlands across the state of Victoria in southeastern Australia ($n = 100$; Fig.~\ref{Fig:study_sites}). These wetlands experienced ephemeral to permanent inundation, and are fed by varying sources ranging from surface water runoff, groundwater, and river flooding. These sites support diverse plant communities that are adapted to the local inundation conditions and vary not only seasonally but on longer flooding timescales. The study was conducted in collaboration with the Victorian Catchment Management Authorities (CMAs) and the Victorian State Government Department of Environment, Land, Water and Planning (DELWP), and in part because of this, we spread our sampling effort evenly across the 10 CMA regions of Victoria. We also chose wetlands across six key wetland categories defined by \citet{corrick1980} and used in other work supported by DELWP: freshwater meadow, shallow freshwater marsh, deep freshwater marsh, permanent open freshwater, saline wetlands, and alpine wetlands \citetext{for further discussion of stock variation by wetland type for this data, see previous work \citealp{carnell2018}}.
+
+\begin{figure}[!ht]
+	\centering
+	{\includegraphics[width=0.7\textwidth]{chapters/Chapter2_carbon/figs/site_map.png}}
+	\caption{Wetlands and waterbodies in Victoria and location of 100 study sites.}
+	\label{Fig:study_sites}
+\end{figure}
+
+Sampling was conducted in Austral spring/summer between August 2015 and February 2016. We collected five soil cores at each wetland and randomly selected a subset for analysis (typically three cores, but in some cases up to five; Fig.~\ref{Fig:method}a). At each site, we placed replicate cores 50 m apart within a consistent vegetation zone. At each sampling point we hammered a 5 cm diameter PVC pipe (hereafter referred to as `the core') into the soil until 1 m, or until refusal. The depth at refusal varied considerably among cores and sites, and most indicated the start of a thick clay layer. For some areas this was as shallow as 0.16 m (typically temporary open water bodies), while other wetlands contained organic peat material well past 1 m. Core collection using this approach resulted in some compaction, which we accounted for by measuring the difference between the amount of soil sampled and the depth the core was hammered into the ground. We assumed constant compaction along the core. After the core was in place we sealed it by inserting a rubber plug. After removing the core we stabilised the top layer of sediment with a foam plug and capped the ends with a plastic cover and masking tape to prevent moisture loss. 
+
+\begin{figure}[!ht]
+  \centering
+	\includegraphics[width=.5\textwidth]{chapters/Chapter2_carbon/modified-figs/method.png}
+	\caption{Methodology for core collection and analysis. (a) PVC pipes were hammered into the soil until 1 m, or until depth of refusal. We sealed cores with plastic lids and duct tape. (b) Cores were extruded in the lab and sliced into 2 cm sections at regular intervals before being sent for lab analysis. (c) Organic carbon densitywas extrapolated across depth using a hierarchical generalised additive model, before integration for stock estimation. (d) Spatially-explicit landscape environmental data were used to predict carbon stock across the state. Photo credit: Deakin University, Burwood VIC.}
+	\label{Fig:method}
+\end{figure}
+
+\subsection*{Carbon analysis}
+
+In the laboratory we extruded the soil from the replicate cores. We sliced each core into 2 cm samples at 0\textemdash2 cm, 12\textemdash14 cm, 28\textemdash30 cm, 48\textemdash50 cm, 74\textemdash76 cm, and 98\textemdash100 cm to send to the laboratory (Fig.~\ref{Fig:method}b). When depth at refusal was shallower than 1 m, we sliced an additional sample at the deepest depth. The number of samples per core varied due to variation in core depth. 
+
+We dried each 2 cm sample at 50 $^{\circ}$C for 48\textemdash72 hours and homogenised them with a stainless steel mortar and pestle (Retch RM200) before exposing them to gamma irradiation at 50 kGray for 60 hours (by Steritech, Dandenong, Victoria). This irradiation removes potential infection of \textit{Daktulosphaira vitifoliae}, since some of our samples came from known Phylloxera Infested Zones This irradiation process has been demonstrated to have no major influence on carbon measurements in soil samples (Baldock et al., unpublished data). 
+
+We sent the samples to the Commonwealth Scientific and Industrial Research Organisation (CSIRO) in South Australia for carbon analysis (a detailed summary of their protocol can be found in Appendix~\ref{apx:ch5}). CSIRO provided us with an organic carbon estimate of each sample. We estimated organic carbon density ($mg$ $cm^{-3}$) by multiplying the estimate by dry bulk density: the dry weight of sample divided by volume, in this case $\pi*2.5^2*2$ because each slice sample had a radius of 2.5 cm and a thickness of 2 cm. 
+
+\subsection*{Carbon stock estimation}
+
+We modelled organic carbon density for sample $k$ in core $j$ and site $i$ ($C_{ijk}$) as lognormally distributed (Eq.~\ref{Eqn:dist_c}), where $\mu_{ijk}$ can be described by a hierarchical generalised additive model (Fig.~\ref{Fig:method}c). This model consists of: a random intercept for site $i$ = 1, ..., 100 ($\alpha_i$), a random intercept for core $j$ = 1, ..., 305 ($\gamma_j$), a regression spline of depth ($f(z_{ijk})$), and a regression spline incorporating the effect of site-level smoothers on depth ($g_i(z_{ijk})$) (Eq.~\ref{Eqn:gam_c}). 
+
+\begin{gather}
+ln(C_{ijk}) \sim N(\mu_{ijk}, \sigma^2)\label{Eqn:dist_c}\\
+\mu_{ijk} = \alpha_i + \gamma_j + f(z_{ijk}) + g_i(z_{ijk}) + \epsilon_{ijk} \label{Eqn:gam_c}
+\end{gather}
+where $\epsilon_{ijk}$ is the Gaussian error term. A hierarchical GAM is appropriate in this context because not only do we expect samples to vary the intercept of their relationship with depth by core and site, but we also expect site to affect the \textit{shape} of the relationship with depth. We can also share information from the wider dataset via the mean regression spline of depth, giving us more information for cores that had fewer samples and therefore less well-resolved curves with depth. 
+
+To use this model to estimate stock ($Mg$ $h^{-1}$) for each core ($S_{ij}$), we generalise the function for organic carbon at depth by removing the sample-level error term ($h_{ij}(x)$; Eq.~\ref{Eqn:h_x}) and integrate under this function across the maximum depth achieved at a site (Eq.~\ref{Eqn:stock}): 
+
+\begin{gather}
+h_{ij}(x) = \alpha_i + \gamma_j + f(x) + g_i(x)\label{Eqn:h_x}\\
+S_{ij} = \int_{0}^{m_{i}}  e^{h_{ij}(x)} dx\label{Eqn:stock}\\
+m_{i} = \max_{k}(z_{ijk})
+\end{gather}
+
+\subsection*{Landscape scale drivers of carbon stock}
+
+We used a separate model to next estimate the landscape environmental variables that predict stock (Fig.~\ref{Fig:method}d). We collected spatial data layers related to climate, hydrology, geomorphology, and vegetation (Table~\ref{Tab:layers}). Primary production is typically high in wetlands, meaning large volumes of both locally-produced and exogenous litter are brought in and deposited into the wetland. The degree to which a wetland is an effective sink for exogenous carbon depends on the size and condition of its catchment and the flow and consistency of its hydrologic connectivity. Inundation can also promote anoxic conditions ideal for limited litter decomposition. Spatial layers collected from a range of Victorian government data sources were collated as candidates to explain spatial variation. Mean annual temperature, annual precipitation, and aridity were highly correlated with each other and therefore only one is used in the model (Fig.~\ref{apx:stockmod_pairplot}). We selected annual precipitation because of its direct impact on the rate of water delivery to a site. 
+
+\begin{table}[!ht]
+	\caption{Wetland characteristics tested as potential predictors of soil carbon density. ANUCLIM version 6.1 estimated to 9 arc-second based on GeoScience Australia’s 9 second Digital Elevation Model \citep{xu2018}. *spatial layers indicate layers excluded due to high correlation (\textgreater0.7) with other layers.}
+	\label{Tab:layers}
+	\centering
+	\small
+	\begin{tabularx}{\textwidth}{llllX}
+		\toprule
+    \makecell[l]{Variable\\ category} & Spatial data & Unit & Source & Description \\
+		\midrule
+		Climate & Temperature* & $^{\circ}$C & ANUCLIM & Mean annual temperature 250 m resolution  \\
+		 & Precipitation & mm & ANUCLIM & The sum of monthly precipitation 250 m resolution \\
+		 & Aridity* & index & \makecell[tl]{Atlas of Living\\ Australia} & Ratio of mean annual monthly precipitation to potential evaporation \\
+		Hydrology & \makecell[tl]{Topographic\\ Wetness Index} & index & ANUCLIM & $TWI = \ln \frac{\alpha}{\tan B}$, where $\alpha$ is upstream contributing area and $B$ is slope in radians at 250 m resolution \\
+		 & \makecell[tl]{Water Observations\\ from Space} & \% & Geoscience Australia & Percent of cloud-free Landsat observations with surface water visible at 25 m resolution \\
+		Geomorphology & \makecell[tl]{Multiresolution Valley\\ Bottom Flatness} & index & ANUCLIM & Integrated estimate of valley bottom flatness at 250 m resolution \\
+		 & Catchment size & $m^2$ & \makecell[tl]{Bureau of Meteorology,\\ Australian Government} & Area of AHGF Catchment from The Australian Hydrological Geospatial Fabric \\
+		Vegetation & \makecell[tl]{Normalized Difference\\ Vegetation Index} & index & \makecell[tl]{Bureau of Meteorology,\\ Australian Government} & Spectral reflectance measurements ratio $NDVI = \frac{NIR - Red}{NIR + Red}$ at 250 m resolution \\
+		 & \makecell[tl]{Native vegetation\\ in catchment} & ratio & \makecell[tl]{Bureau of Rural Sciences,\\ Australian Government} & Percent of native vegetation cover: native vegetation cover consists of classes 0, 1, 2, and 3 of Vegetation Assets, States and Transitions (VAST) dataset \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+We model stock for core $j$ and site $i$ ($S_{ij}$) with a a lognormal distribution (Eq.~\ref{Eqn:dist_s}), where $\eta_{ij}$ can be described by a generalised additive model. This model consists of a separate regression spline for each layer of 1, ... n = 7 layers ($f_n(x_{ijn})$; Eq.~\ref{Eqn:gam_s}). 
+
+\begin{gather}
+ln(S_{ij}) \sim N(\eta_{ij}, \rho^2)\label{Eqn:dist_s}\\
+\eta_{ij} = f_1(x_{ij1}) + ... + f_n(x_{ijn}) + \epsilon_{ij}\label{Eqn:gam_s}
+\end{gather}
+
+We implemented an additional penalty for each smooth term. If all the smoothing parameters for the term tend to infinity, the term is selected out of the model \citep{marra2011}. We prepared spatial layers with the \textit{raster} package \citep{raster}, and fit both GAMs with the \textit{mgcv} package \citep{mgcv} in the statistical computing environment R \citep{R}. 
+
+We evaluated the predictive performance of the carbon stock model by cross-validating its predictive performance on data for a site held out when training the model initially \citep{hooten2015}. For each run of the model, we split the dataset into training data (including all but one site) and test data (the held-out site). The model was then run 100 times, giving each site the opportunity to be the `test' data. Sites were used as the cross-validation grouping because we were interested in the ability of environmental attributes to predict to an entirely new site rather than to individual core estimates. Model evaluation was conducted by calculating the $R^2$ of each model (across all folds).
+
+\section{Results}
+
+\subsection*{Organic carbon density}
+
+The hierarchical organic carbon density model fit the data well ($R^2$ = \Sexpr{round(ocd_mod_cor(OCD_mod, samples), 2)}; Fig.~\ref{apx:density_mod}) and we can take away three main conclusions. First, on average organic carbon decreases with depth (Fig.~\ref{Fig:depth_spline}a), and second, this smooth curve varies in its intercept, or average density, both within wetlands (variance of core-level intercept = \Sexpr{round(var_core, 2)}; Fig.~\ref{Fig:depth_spline}b) and between wetlands (variance in site-level intercept = \Sexpr{round(var_site, 2)}). Last, sites differ not only in their average log-carbon density but also in the shape of their functional responses to depth (Fig.~\ref{Fig:depth_spline}c). When the depth by site spline is removed, the resulting model explains just \Sexpr{round(dev_explained(OCD_mod_simple), 2)} of deviance compared to \Sexpr{round(dev_explained(OCD_mod), 2)} for the full model. 
+
+\begin{figure}[!ht]
+  \centering
+	\includegraphics[width=.9\textwidth]{chapters/Chapter2_carbon/figs/s_sites_depth.png}
+	\caption{Predictions from organic carbon density model. (a) Depth spline with 2 standard error. (b) Variation in intercept by core for two example cores from Dereel Lagoon Wildlife Reserve. (c) Variation in shape of functional relationship with depth by site with two example sites (Dereel Lagoon WR and Ewing Morass State Wildlife Reserve).}
+	\label{Fig:depth_spline}
+\end{figure}
+
+Stock estimates for each core ranged from \Sexpr{round(min(model_df$stock_Mg_h), 2)} to \Sexpr{round(max(model_df$stock_Mg_h), 2)} $Mg h^{-1}$ (to maximum depth at each site). 
+
+\subsection*{Landscape predictors of carbon stock}
+
+Cross-validated predictive performance suggests the landscape-scale model was reasonably successful at predicting carbon stock at new sites ($R^2$ = \Sexpr{round(cor(cv_mod$stock_Mg_h, cv_mod$pred)^2, 2)}). The model, when run on all the data, explained \Sexpr{round(dev_explained(stock_mod_nore), 2)*100}\% of the deviance, which indicates considerable support. Model evaluation suggests all the smooth terms significantly improved model fit (Table~\ref{apx:stock_mod}). As smooth terms, there is no coefficient for their impact on carbon stock, but prediction plots for each model term (holding all other variable values to their mean) give us some indication of the effect of each variable on carbon stock prediction (Fig.~\ref{Fig:stock_spline}). 
+
+\begin{figure}[!ht]
+  \centering
+	\includegraphics[width=.9\textwidth]{chapters/Chapter2_carbon/figs/stock_mod_variables.png}
+	\caption{Predictions from soil carbon stock model for each variable included, holding the other variables at their mean value. Ticks along x-axis indicate number of datapoints. (a) Annual precipitation (mm), (b) Normalised Difference Vegetation Index, (c) Topographic Wetness Index, (d) Valley bottom flatness, (e) Water observation from space (\%), (f) Proportion of native vegetation, and (g) log catchment area ($m^2$).}
+	\label{Fig:stock_spline}
+\end{figure}
+
+\section{Discussion}
+
+Our study makes two main contributions to carbon stock prediction. First, our use of a hierarchical model for carbon density estimation marks an important methodological advancement for accurately estimating carbon stock when we must extrapolate to depth. Second, it is the first attempt to model regional sampling of freshwater wetlands with continuous environmental data, and demonstrate such a model's effectiveness with out-of-sample prediction. 
+
+\subsection*{Carbon density with depth}
+
+Global carbon stock comparison requires that we report carbon stock to consistent depth. To do so, we may need to extrapolate organic carbon density for some samples to depths beyond what could be measured. The Intergovernmental Panel on Climate Change (IPCC) guidelines suggest that soil carbon stock for mineral soil wetlands be reported to a depth of 30 cm \citetext{as in \citealp{conti2013}} or 1 m for coastal wetlands \citep{hiraishi2014}. However, restricting stock measurement to 30 cm can mask significant carbon stored in freshwater wetlands up to 1 m and beyond \citep{grover2012}. \citet{nahlik2016} estimate that 65\% of total wetland soil carbon is actually stored between 30 and 120 cm deep. In this study we were able to sample \Sexpr{round(min(stock_data_site$max_depth), 1)} \textemdash \Sexpr{round(max(stock_data_site$max_depth),1)} cm deep, illustrating a common, but wide range for penetration of inland wetland soils with traditional coring techniques. Our ability to extrapolate confidently carbon density to unmeasured depth is important in order to predict inland soil carbon stock both for conservation and carbon budgeting as well as for ecological comparison. 
+
+In the past, we have assumed that carbon density at unmeasured depths is equal to the deepest measured carbon density \citetext{as in \citealp{ma2015}}. Our results suggest that this approach to extrapolation at depth is inadequate because the densest carbon is found in the upper layers of sediment and on average declines with depth \citetext{also reported in \citealp{nahlik2016}}. Our results also indicate that the shape of this relationship varies with site \citetext{also reported in an estuary system \citealp{adame2015} and in Cypress swamps \citealp{villa2015}}. Varying relationships of carbon with depth is unsurprising, given the different land use histories and accumulation rate of the sediment \citetext{as in freshwater versus tidal wetlands in \citealp{nahlik2016}}. With this in mind, others have used smoothing functions to extrapolate to depth \citetext{such as for organic carbon density in \citealp{carnell2018} and for bulk density in \citealp{nahlik2016}}, but tend to rely upon models that assign a separate function to each core. A hierarchical modelling approach, such as the one presented in this study, is useful because it allows individual sampling points to learn from both the global mean relationship with depth as well as site-level relationships \citetext{as demonstrated in relation to diversity metrics \citealp{marion2018}}. This is particularly useful where there are few depth samples per core, which can lead to biased estimates if a separate spline is fit to each core. Future work to improve extrapolation with depth could build on this hierarchical model by using environmental variables themselves to predict the depth function. 
+
+\subsection*{Landscape drivers of soil carbon stock}
+
+The prediction plots for landscape drivers of carbon stock indicate there are many ways to be carbon rich. Precipitation varied in an approximately cubic trend, but the variability of that prediction is quite high for high precipitation levels. We may safely conclude that low precipitation areas will tend to have low carbon stock. Increasing precipitation may be a good predictor of carbon stock because it supports higher productivity, more material is being brought in to a site, or a higher water level results perhaps in low-decomposition conditions. High water observation is associated with low carbon stock, and is perhaps a reflection of low carbon stock found in permanently inundated wetlands that often have little carbon from primary productivity. However, we must be wary about generalising this pattern because Water Observation from Space data does not tell us about the timing or permanence of inundation and is subject to higher error in regions with frequent cloud-cover regions. Despite these limitations, this result matches other work that indicates inundation-induced anaerobic conditions resulting in reduced decomposition is not the only predictor for carbon stock \citep{villa2015}. 
+
+Normalised Difference Vegetation Index (NDVI), a proxy for productivity, appeared high in both low- and high-carbon areas, so although we expect productivity to be associated with high soil carbon stock \citep{whitaker2015,wang2016,marin-muniz2014,ceballos2013}, it is perhaps productivity of certain kinds of vegetation compared to others that account for the effect. Although environmental variables contribute directly to soil carbon, such as by affecting decomposition conditions, in many cases these variables are important because of the types of plant communities they support. 
+
+\subsection*{Global prediction implications}
+
+Remote sensing data have different meanings in different ecosystems. It can be especially problematic for small wetlands that are cumulatively important to total carbon storage in a landscape but are missed by low resolution data. Using global environmental data to generalise water-level dynamics is also difficult given the diversity of wetland hydrologic regimes. Despite these limitations, our use of spatial environmental data at a maximum resolution of 250 m was reasonably successful at predicting out-of-sample carbon stock. The Victorian wetland landscape was a good test case because of its diversity in particular of arid zone wetlands that flood at greatly different intervals from seasonally to one every 50 years. Prediction using globally available data is a vital step to targeting wetlands for conservation and carbon offsetting, particularly for data-poor wetlands. This type of prediction methodology is already being developed for mapping forest aboveground carbon stock \citep{cartus2014} and mangrove soil carbon \citep{sanderman2018}, but not yet for freshwater carbon.  On a global scale, continuous environmental data with out-of-sample validation is an important way forward to improving prediction across the diversity of freshwater and inland wetlands.  
+
+\section{Acknowledgements}
+
+We thank Steve Krueger, Booyanuj Yukate, and Kelsey Johnson for their considerable help in both the field and laboratory. We also thank Jan Barton, Alex Pearse, Tessa Evans, and Quinn Olivier for assistance in the field. We sincerely thank Bruce Hawke for running all our soil samples. We thank Janet Holmes, Tamara van Polanen Petel (DELWP), Paul Reich (ARI), Rohan Hogan (NCCMA), Natalie Dando (NECMA), Adam Bester (GHCMA), and Simon Casanelia (GBCMA) for their support in the development and execution of this project. Funding was provided by Department of Environment, Land, Water \& Planning grant to PEC and PIM. An Australian Research Council DECRA Fellowship (DE130101084) and an Australian Research Council Linkage Project (LP160100242) to PIM. Funding was provided to PM by the Generalitat de Catalunya (Grant 2014 SGR‐1356) and an Australian Research Council LIEF Project (LE170100219). Funding was provided to SMW by the Australian Research Council Centre of Excellence for Environmental Decisions, the Holsworth Wildlife Research Endowment \& the Ecological Society of Australia, and the Melbourne International Research Scholarship and Melbourne International Fee Remission Scholarship. This work is contributing to the ICTA “Unit of Excellence” (MinECo, MDM2015‐0552). Permit number 10007689 was obtained for sampling in National Parks. 
