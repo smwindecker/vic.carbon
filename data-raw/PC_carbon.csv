@@ -1,0 +1,101 @@
+WETLAND_NO,SITE_NAME,SITE_CODE,TYPE,C_TYPE,CMA,1M_STOCK,HECTARES,AVEMGC_H
+82722,Baw Baw,BAWB,alpine,High country peatlands,WEST GIPPSLAND,366.0135238,0.8,183.0067619
+75981,Cooper's Bog,CBOG,alpine,High country peatlands,NORTH EAST,457.5733443,3.8,228.7866722
+82552,Dam Valley,DAMV,alpine,High country peatlands,WEST GIPPSLAND,345.5328348,1.3,172.7664174
+97754,Delegate River,DELE,alpine,High country peatlands,EAST GIPPSLAND,593.0967388,176,296.5483694
+,Echo Flat,ECHO,alpine,High country peatlands,GOULBURN BROKEN,311.6396921,0,155.819846
+,Highlands Peatlands 4,GBPT4,alpine,High country peatlands,GOULBURN BROKEN,671.9092246,0,335.9546123
+95209,Howitt's Rd,HOWI,alpine,High country peatlands,EAST GIPPSLAND,462.8258649,5.4,231.4129324
+95089,Howitt's Rd South,HOWS,alpine,High country peatlands,EAST GIPPSLAND,416.5882458,10.1,208.2941229
+90325,King Billy Track,KIBI,alpine,High country peatlands,WEST GIPPSLAND,444.2318945,0.5,222.1159473
+97199,Limestone Creek,LIME,alpine,High country peatlands,EAST GIPPSLAND,438.8107347,10.4,219.4053673
+97111,Native Dog Flat,NDOG,alpine,High country peatlands,EAST GIPPSLAND,379.9512881,2.8,189.9756441
+75972,Nunziata Bog,NUNZ,alpine,High country peatlands,NORTH EAST,734.2445449,4,367.1222724
+97051,Tony Bog,TONY,alpine,High country peatlands,EAST GIPPSLAND,330.4037747,2.6,165.2018874
+60702,Barmah,BARM,billabong,Permanent open freshwater,GOULBURN BROKEN,133.5111472,251.1,66.75557358
+45354,Black Charlie,BLCH,billabong,Deep freshwater marsh,NORTH CENTRAL,229.564795,8.6,114.7823975
+75158,Chapel Lane,CHAP,billabong,Deep freshwater marsh,NORTH EAST,191.6442855,3.5,95.82214273
+11439,Cowanna Billabong,COWA,billabong,Permanent open freshwater,MALLEE,147.2325158,12.5,73.61625791
+10620,Horseshoe Lagoon,HOLA,billabong,Permanent open freshwater,MALLEE,132.9102529,34.7,66.45512644
+11360,Kings Billabong,KING,billabong,Permanent open freshwater,MALLEE,66.05267044,171.5,33.02633522
+63922,Little Rushy Swamp,LIRU,billabong,Shallow freshwater marsh,GOULBURN BROKEN,191.3943784,15.8,95.69718918
+75166,Puzzle Bend,PUZZ,billabong,Deep freshwater marsh,NORTH EAST,223.8635176,9.4,111.9317588
+45267,Reedy Lagoon Gunbower,RELA,billabong,Deep freshwater marsh,NORTH CENTRAL,233.0464145,41.1,116.5232073
+76173,Richardson's Bend,RICH,billabong,Deep freshwater marsh,NORTH EAST,155.6637637,6.5,77.83188184
+46014,Richardson's Lagoon,RILA,billabong,Permanent open freshwater,NORTH CENTRAL,209.0616589,12.2,104.5308294
+60706,Steamer Plain,STPL,billabong,Shallow freshwater marsh,GOULBURN BROKEN,177.6519049,1381.6,88.82595245
+70451,Wyndham Vale,WYND,billabong,Freshwater meadow,PORT PHILLIP AND WESTERNPORT,176.5773927,3.1,88.28869633
+70250,Boneo Swamp,BONE,deep marsh,Shallow freshwater marsh,PORT PHILLIP AND WESTERNPORT,1201.232493,320.2,600.6162463
+26609,Bryans Swamp,BRYN,deep marsh,Deep freshwater marsh,GLENELG HOPKINS,744.5339637,666.3,372.2669819
+70405,Cunningham's Swamp,CHAM,deep marsh,Freshwater meadow,PORT PHILLIP AND WESTERNPORT,130.9446003,26.9,65.47230014
+91014,Clydebank Morass,CLYD,deep marsh,Deep freshwater marsh,WEST GIPPSLAND,699.5037397,1330.8,349.7518698
+54029,Dereel Lagoon,DERE,deep marsh,Deep freshwater marsh,CORANGAMITE,582.968157,33.6,291.4840785
+96501,Ewings Morass,EWIN,deep marsh,Deep freshwater marsh,EAST GIPPSLAND,425.1870268,1335.8,212.5935134
+90963,Heart Morass,HART,deep marsh,Deep freshwater marsh,WEST GIPPSLAND,464.5031924,1560.3,232.2515962
+84241,Holey Plains Swamp,HOLY,deep marsh,Shallow freshwater marsh,WEST GIPPSLAND,405.9813921,5.9,202.990696
+92469,Lara Swamp,LARA,deep marsh,Deep freshwater marsh,WEST GIPPSLAND,575.0457182,6,287.5228591
+20614,Long Swamp,LONG,deep marsh,Deep freshwater marsh,GLENELG HOPKINS,1102.342292,726.2,551.171146
+20911,McCallum Swamp,MCAL,deep marsh,Shallow freshwater marsh,GLENELG HOPKINS,341.0703461,248.4,170.5351731
+95372,Moormung,MOOR,deep marsh,Deep freshwater marsh,EAST GIPPSLAND,559.9609825,13.5,279.9804913
+70806,Newhaven,NEWH,deep marsh,Shallow freshwater marsh,PORT PHILLIP AND WESTERNPORT,268.0372822,9,134.0186411
+91145,Sale Common,SALE,deep marsh,Shallow freshwater marsh,WEST GIPPSLAND,305.289023,275.8,152.6445115
+70988,Seaford Wetlands,SEAF,deep marsh,Shallow freshwater marsh,PORT PHILLIP AND WESTERNPORT,539.8522209,93.2,269.9261105
+71622,Spadonis,SPAD,deep marsh,Freshwater meadow,PORT PHILLIP AND WESTERNPORT,317.2842368,2.5,158.6421184
+11354,Woolong Wetland,WOOL,deep marsh,Permanent open freshwater,MALLEE,212.880451,116.1,106.4402255
+96506,Lake Beatle,BEAT,intermittent,Permanent open freshwater,EAST GIPPSLAND,491.5537625,15.1,245.7768813
+26714,Brady Swamp,BRAD,intermittent,Deep freshwater marsh,GLENELG HOPKINS,415.9738918,1086.2,207.9869459
+26715,Brady Swamp South,BRADSO,intermittent,Deep freshwater marsh,GLENELG HOPKINS,454.3572203,1086.2,227.1786101
+16171,Lake Bringalbert,BRNG,intermittent,Permanent open freshwater,WIMMERA,65.33447675,85.1,32.66723837
+12217,Lake Carpul,CARP,intermittent,Shallow freshwater marsh,MALLEE,103.9171587,62.2,51.95857934
+19115,Connangorach swamp,CONN,intermittent,Deep freshwater marsh,WIMMERA,194.5970482,154.2,97.29852409
+60246,Lake Cooper,COOP,intermittent,Permanent open freshwater,GOULBURN BROKEN,45.9505391,1247.1,22.97526955
+16489,Lake Carpolac,CPLC,intermittent,Deep freshwater marsh,WIMMERA,335.38539,32.9,167.692695
+(blank),Darlot Swamp,DARL,intermittent,Freshwater meadow,WIMMERA,98.42859178,0,49.21429589
+43149,The Marsh/First,FRST,intermittent,Permanent open freshwater,NORTH CENTRAL,87.24571766,778.9,43.62285883
+54518,Lake Gherang,GHER,intermittent,Deep freshwater marsh,CORANGAMITE,224.7686249,100.1,112.3843124
+12765,Heywood Lake,HEYL,intermittent,Deep freshwater marsh,MALLEE,12.19742395,201.5,6.098711975
+18651,Lake Hindmarsh,HIND,intermittent,Permanent open freshwater,WIMMERA,20.1625429,13879.6,10.08127145
+,Lake Kanagulk,KANA,intermittent,Freshwater meadow,GLENELG HOPKINS,84.65934879,0,42.32967439
+11198,Lake Kramen,KRAM,intermittent,Permanent open freshwater,MALLEE,84.96252656,172.8,42.48126328
+41400,Lake Lalbert,LALB,intermittent,Deep freshwater marsh,NORTH CENTRAL,101.3154363,686.5,50.65771815
+17367,Lake Lawloit,LAWL,intermittent,Shallow freshwater marsh,WIMMERA,169.6564109,60.3,84.82820546
+37059,Lake Learmonth,LEAR,intermittent,Permanent open freshwater,GLENELG HOPKINS,132.8399791,511.6,66.41998957
+43190,Lake Elizabeth,LIZL,intermittent,Saline,NORTH CENTRAL,73.14654768,93.7,36.57327384
+63119,Loch Garry,LOCH,intermittent,Permanent open freshwater,GOULBURN BROKEN,154.5279703,327.9,77.26398513
+11207,Margooya Lagoon,MARG,intermittent,Freshwater meadow,MALLEE,156.5595182,34,78.27975909
+41615,Merin Merin Swamp,MERR,intermittent,Shallow freshwater marsh,NORTH CENTRAL,114.4421623,215,57.22108114
+22909,Lake Mundi,MUNDY,intermittent,Shallow freshwater marsh,GLENELG HOPKINS,340.3715069,240.4,170.1857534
+19681,Mutton Swamp,MUTT,intermittent,Freshwater meadow,WIMMERA,126.8113046,12.5,63.40565232
+18269,Olivers Lake,OLIV,intermittent,Saline,WIMMERA,368.83873,441.3,184.419365
+12213,Lake Powell,POWL,intermittent,Shallow freshwater marsh,MALLEE,85.02088176,128.3,42.51044088
+63173,Reedy Swamp,RESW,intermittent,Deep freshwater marsh,GOULBURN BROKEN,325.2019433,130.5,162.6009717
+43143,Top Marsh/Third,THRD,intermittent,Deep freshwater marsh,NORTH CENTRAL,63.58395519,1204.8,31.7919776
+18095,Tooan Marsh,TOOA,intermittent,Freshwater meadow,WIMMERA,136.7267443,14.7,68.36337216
+10172,Lake Walla Walla ,WAWA,intermittent,Permanent open freshwater,MALLEE,104.7677732,826.3,52.38388658
+76285,Whyte's Swamp,WHYT,intermittent,Shallow freshwater marsh,NORTH EAST,108.9307963,4.4,54.46539813
+67909,Winton Wetlands,WINT,intermittent,Permanent open freshwater,GOULBURN BROKEN,263.7462504,2953.7,131.8731252
+42643,Lake Yando,YAND,intermittent,Deep freshwater marsh,NORTH CENTRAL,398.6274798,82.9,199.3137399
+97502,Lake Curlip,CURL,permanent freshwater,Deep freshwater marsh,EAST GIPPSLAND,336.6196185,944.5,168.3098093
+32200,Lake Elingamite,ELIN,permanent freshwater,Permanent open freshwater,GLENELG HOPKINS,441.6840501,278.9,220.842025
+43164,Kangaroo Lake,KNGL,permanent freshwater,Permanent open freshwater,NORTH CENTRAL,271.1623461,983.2,135.581173
+75373,Lake Moodemere,LMOD,permanent freshwater,Permanent open freshwater,NORTH EAST,160.0976602,185.4,80.04883012
+75200,McLaughlins Rd,MCLA,permanent freshwater,Shallow freshwater marsh,NORTH EAST,154.0171761,3.7,77.00858804
+50671,Lake Purrumbete,PURR,permanent freshwater,Permanent open freshwater,CORANGAMITE,604.6631426,527.8,302.3315713
+52225,Lake Beeac,BEAC,saline lake,Saline,CORANGAMITE,618.7316448,658.6,309.3658224
+31850,Lake Buninjon,BUNI,saline lake,Saline,GLENELG HOPKINS,66.25907249,285.6,33.12953625
+50614,Lake Colongulac,CLNG,saline lake,Saline,CORANGAMITE,240.3607661,1626.7,120.180383
+52178,Lake Colac,COLA,saline lake,Saline,CORANGAMITE,107.9571089,2896.3,53.97855447
+50406,Lake Corangamite,CORN,saline lake,Saline,CORANGAMITE,546.33657,24611.8,273.168285
+50718,Lake Gnarpurt,GNAR,saline lake,Saline,CORANGAMITE,109.6323596,2583.2,54.81617982
+52302,Lake Weering,WEER,saline lake,Saline,CORANGAMITE,342.8099593,471.6,171.4049796
+67925,"Ashmeade Swamp, Winton Wetlands",ASHM,swamp,Deep freshwater marsh,GOULBURN BROKEN,210.0916283,64.1,105.0458141
+75293,Black Swamp,BLAC,swamp,Shallow freshwater marsh,NORTH EAST,253.1461026,174.4,126.5730513
+97503,Cabbage Tree Lagoon,CABG,swamp,Deep freshwater marsh,EAST GIPPSLAND,320.9884001,442.9,160.4942001
+62010,Doctors Swamp,DOCS,swamp,Shallow freshwater marsh,GOULBURN BROKEN,200.5058038,224.6,100.2529019
+72012,Lang Lang,LANG,swamp,Shallow freshwater marsh,PORT PHILLIP AND WESTERNPORT,579.693407,5.6,289.8467035
+17347,Red Gum Swamp,REDG,swamp,Deep freshwater marsh,WIMMERA,175.8406721,69.7,87.92033605
+72101,Bunyip,BUNY,temporary marsh,Freshwater meadow,PORT PHILLIP AND WESTERNPORT,444.6933484,39.1,222.3466742
+84208,McKenzie's Rd,MCKE,temporary marsh,Shallow freshwater marsh,WEST GIPPSLAND,1034.455568,2,517.2277841
+70256,Mornington Peninsula National Park,MORN,temporary marsh,Freshwater meadow,PORT PHILLIP AND WESTERNPORT,460.0226887,3.7,230.0113443
+70870,Rhyll Swamp,RHYL,temporary marsh,Deep freshwater marsh,PORT PHILLIP AND WESTERNPORT,661.2826107,43.1,330.6413054
+97553,Yeering River East Branch,YEER,temporary marsh,Freshwater meadow,EAST GIPPSLAND,849.3819078,33.9,424.6909539
