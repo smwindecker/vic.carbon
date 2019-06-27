@@ -3,16 +3,14 @@ library(raster)
 library(magrittr)
 library(mgcv)
 
-path <- 'chapters/Chapter2_carbon/'
-R.utils::sourceDirectory(paste0(path, 'R/'))
+R.utils::sourceDirectory('R/')
 
 # data prep
-lab_data <- process_lab_results(lab_data = 
-                                  paste0(path, "data-raw/VWC_Lab_Results.csv"))
+lab_data <- process_lab_results(lab_data = "data-raw/VWC_Lab_Results.csv")
 
-samples <- prepare_master_data(site_data = paste0(path, "data-raw/VWC_SitesCores_Masterlist.csv"),
-                               sample_data = paste0(path, "data-raw/VWC_Samples_Masterlist.csv"),
-                               wetland_types = paste0(path, "data-raw/PC_carbon.csv"),
+samples <- prepare_master_data(site_data = "data-raw/VWC_SitesCores_Masterlist.csv",
+                               sample_data = "data-raw/VWC_Samples_Masterlist.csv",
+                               wetland_types = "data-raw/PC_carbon.csv",
                                lab_data = lab_data)
 
 # write.csv(samples[,c('SITE_CODE', 'LAT', 'LON')], paste0(path, 'samples_latlon.csv'))
