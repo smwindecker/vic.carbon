@@ -1,0 +1,191 @@
+packages:
+  - knitr
+  - tinytex
+  - dplyr
+  - tools 
+  - xtable
+  - mgcv # carbon 
+  - raster # carbon
+
+sources:
+  - 'R/prep_data.R'
+  - 'R/stock_analysis.R'
+  - 'R/manuscript_functions.R'
+  - 'R/figures.R'
+  - 'R/sites_map.R'
+  - 'R/models.R'
+
+targets:
+  all:
+    depends:
+      - carbon_figs
+      - manuscript.pdf
+
+  carbon_figs:
+    depends:
+      - figs/aus_map.png
+      - figs/site_map.png
+      - figs/s_sites_depth.png
+      - figs/stockmod_pairplot.png
+      - figs/density_mod.png
+      - figs/stock_mod_variables.png
+      - figs/stock_mod_table.tex
+
+# ---------- carbon data --------------
+
+  lab_data:
+    command: process_lab_results(lab_data = I("data-raw/VWC_Lab_Results.csv"))   
+    cleanup_level: purge
+    check: exists
+
+  samples:
+    command: prepare_master_data(site_data = I("data-raw/VWC_SitesCores_Masterlist.csv"),
+                               sample_data = I("data-raw/VWC_Samples_Masterlist.csv"),
+                               wetland_types = I("data-raw/PC_carbon.csv"),
+                               lab_data = lab_data)   
+    cleanup_level: purge
+    check: exists
+
+  OCD_mod:
+    command: ocd_gam(samples, simple = FALSE)   
+    cleanup_level: purge
+    check: exists
+
+  var_core: 
+    command: variance_component(OCD_mod, I(1))
+    cleanup_level: purge
+    check: exists
+
+  var_site:
+    command: variance_component(OCD_mod, I(2))
+    cleanup_level: purge
+    check: exists    
+
+  OCD_mod_simple:
+    command: ocd_gam(samples, simple = TRUE)   
+    cleanup_level: purge
+    check: exists
+
+  stock_data_site:
+    command: calculate_stock(samples, OCD_mod, I('site'))   
+    cleanup_level: purge
+    check: exists
+
+  stock:
+    command: combine_other_spatial(stock_data_site, 
+                                 ala_file = I('data-raw/ALA_layers.csv'),
+                                 catchments_file = I('data-raw/sites_with_catchment_data.csv'))   
+    cleanup_level: purge
+    check: exists
+
+  spatial_stock:
+    command: make_samples_spatial(stock, I('+proj=longlat +datum=WGS84 +no_defs'))   
+    cleanup_level: purge
+    check: exists
+
+  sites_only:
+    command: extract_sites(samples)   
+    cleanup_level: purge
+    check: exists
+
+  spatial_sites:
+    command: make_samples_spatial(sites_only, I('+proj=longlat +datum=WGS84 +no_defs'))   
+    cleanup_level: purge
+    check: exists
+
+  model_df:
+    command: create_model_df(spatial_stock)   
+    cleanup_level: purge
+    check: exists
+
+  stock_covs:
+    command: covs_only(model_df)   
+    cleanup_level: purge
+    check: exists
+
+  stock_mod:
+    command: stock_gam(model_df, re = I(TRUE))   
+    cleanup_level: purge
+    check: exists
+
+  stock_mod_nore:
+    command: stock_gam(model_df, re = I(FALSE))
+    cleanup_level: purge
+    check: exists
+
+  cv_mod:
+    command: cv(model_df)   
+    cleanup_level: purge
+    check: exists
+
+# --------- carbon figures -------------
+
+  figs/aus_map.png:
+    command: aus_map(file_location = I('shapefiles/raw'))
+    plot: 
+      width: 800
+      height: 1000
+      bg: transparent
+
+  figs/site_map.png:
+    command: sites_map(spatial_sites, file_location = I('shapefiles/raw'))
+    plot: 
+      width: 800
+      height: 800
+
+  figs/s_sites_depth.png:
+    command: spline_mod_plot(samples, OCD_mod)
+    plot:
+      width: 1200
+      height: 450
+
+  figs/stockmod_pairplot.png:
+    command: pair_plot(stock_covs)
+    plot:
+      width: 1000
+      height: 1000
+
+  figs/density_mod.png:
+    command: plot(OCD_mod, pages = I(1))
+    plot:
+  
+  figs/stock_mod.png:
+    command: plot(stock_mod, pages = I(1))
+    plot:
+  
+  figs/stock_mod_variables.png:
+    command: stock_mod_plot(model_df, stock_mod_nore)
+    plot:
+      width: 1200
+      height: 1000
+
+  figs/stock_mod_table.tex:
+    command: gamtabs(stock_mod_nore, target_name)
+    
+# ------ report ---------
+
+  manuscript.tex:
+    depends:
+      - lab_data # carbon 
+      - samples
+      - OCD_mod
+      - var_core
+      - var_site
+      - OCD_mod_simple
+      - stock_data_site
+      - stock  
+      - spatial_stock
+      - sites_only
+      - spatial_sites
+      - model_df
+      - stock_covs
+      - stock_mod
+      - stock_mod_nore
+      - cv_mod
+    knitr: TRUE
+    cleanup_level: purge
+
+  manuscript.pdf:
+    depends:
+      - carbon_figs
+    command: pdflatex('manuscript.tex')
