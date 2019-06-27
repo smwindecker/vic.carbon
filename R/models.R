@@ -75,9 +75,9 @@ cv_iteration <- function (selected_site, df) {
 
 cv <- function (df) {
   
-  sites <- unique(as.character(model_df$SITE_CODE))
+  sites <- unique(as.character(df$SITE_CODE))
   
-  cv_mod <- lapply(sites, cv_iteration, model_df) %>%
+  cv_mod <- lapply(sites, cv_iteration, df) %>%
     dplyr::bind_rows()
   
   return(cv_mod)
