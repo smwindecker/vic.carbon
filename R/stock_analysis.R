@@ -69,17 +69,17 @@ stock <- function (site_core, df, model, max_type) {
   
 }
 
-create_model_df <- function (spatial_stock_data) {
+create_model_df <- function (spatial_stock_data, path = '') {
   
-  r <- aggregate(shapefile('chapters/Chapter2_carbon/shapefiles/processed/cma.shp'), 
+  r <- aggregate(shapefile(paste0(path, 'shapefiles/processed/cma.shp')), 
                  dissolve = TRUE) %>%
     as("SpatialPolygonsDataFrame")
   
-  ndvi <- raster::mask(raster(x = 'chapters/Chapter2_carbon/shapefiles/processed/ndvi.tif'), r)
-  temp <- raster::mask(raster(x = 'chapters/Chapter2_carbon/shapefiles/processed/meananntemp.tif'), r)
-  prec <- raster::mask(raster(x = 'chapters/Chapter2_carbon/shapefiles/processed/annprecip.tif'), r)
-  twi <- raster::mask(raster(x = 'chapters/Chapter2_carbon/shapefiles/processed/twi.tif'), r)
-  mvbf <- raster::mask(raster(x = 'chapters/Chapter2_carbon/shapefiles/processed/mvbf.tif'), r)
+  ndvi <- raster::mask(raster(x = paste0(path, 'shapefiles/processed/ndvi.tif')), r)
+  temp <- raster::mask(raster(x = paste0(path, 'shapefiles/processed/meananntemp.tif')), r)
+  prec <- raster::mask(raster(x = paste0(path, 'shapefiles/processed/annprecip.tif')), r)
+  twi <- raster::mask(raster(x = paste0(path, 'shapefiles/processed/twi.tif')), r)
+  mvbf <- raster::mask(raster(x = paste0(path, 'shapefiles/processed/mvbf.tif')), r)
   
   # stack covariates
   covariates <- raster::stack(ndvi,
