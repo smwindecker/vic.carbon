@@ -49,3 +49,8 @@ model_df.rds
 papers/
 shapefiles/
 
+.remake/
+*.tex
+*.pdf
+*.log
+
