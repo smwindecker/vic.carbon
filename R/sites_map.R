@@ -25,7 +25,7 @@ sites_map <- function (spatial_sample_data, file_location) {
   
   sp::plot(spatial_sample_data, add = TRUE, 
            col = 'red1', pch = 20, border = 'black')  
-  aus <- png::readPNG('chapters/Chapter2_carbon/figs/aus_map.png')
+  aus <- png::readPNG('figs/aus_map.png')
   rasterImage(aus, 146.5, -36.5, 150, -33.5, cex = 4)
   
   raster::scalebar(150, xy = c(147.5, -39), type = 'bar', cex = 2)
