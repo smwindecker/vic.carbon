@@ -25,7 +25,7 @@ Sampling was conducted in Austral spring/summer between August 2015 and February
 
 \begin{figure}[!ht]
   \centering
-	\includegraphics[width=.5\textwidth]{chapters/Chapter2_carbon/modified-figs/method.png}
+	\includegraphics[width=.5\textwidth]{chapters/Chapter2_carbon/img/method.png}
 	\caption{Methodology for core collection and analysis. (a) PVC pipes were hammered into the soil until 1 m, or until depth of refusal. We sealed cores with plastic lids and duct tape. (b) Cores were extruded in the lab and sliced into 2 cm sections at regular intervals before being sent for lab analysis. (c) Organic carbon densitywas extrapolated across depth using a hierarchical generalised additive model, before integration for stock estimation. (d) Spatially-explicit landscape environmental data were used to predict carbon stock across the state. Photo credit: Deakin University, Burwood VIC.}
 	\label{Fig:method}
 \end{figure}
