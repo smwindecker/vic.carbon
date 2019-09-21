@@ -47,7 +47,7 @@ comments/
 cv_mod.rds
 model_df.rds
 papers/
-shapefiles/
+shapefiles/raw/
 
 .remake/
 *.tex
