@@ -16,7 +16,7 @@ This study was conducted in inland wetlands across the state of Victoria in sout
 
 \begin{figure}[!ht]
 	\centering
-	{\includegraphics[width=0.7\textwidth]{chapters/Chapter2_carbon/figs/site_map.png}}
+	{\includegraphics[width=0.7\textwidth]{figs/site_map.png}}
 	\caption{Wetlands and waterbodies in Victoria and location of 100 study sites.}
 	\label{Fig:study_sites}
 \end{figure}
@@ -25,7 +25,7 @@ Sampling was conducted in Austral spring/summer between August 2015 and February
 
 \begin{figure}[!ht]
   \centering
-	\includegraphics[width=.5\textwidth]{chapters/Chapter2_carbon/img/method.png}
+	\includegraphics[width=.5\textwidth]{img/method.png}
 	\caption{Methodology for core collection and analysis. (a) PVC pipes were hammered into the soil until 1 m, or until depth of refusal. We sealed cores with plastic lids and duct tape. (b) Cores were extruded in the lab and sliced into 2 cm sections at regular intervals before being sent for lab analysis. (c) Organic carbon densitywas extrapolated across depth using a hierarchical generalised additive model, before integration for stock estimation. (d) Spatially-explicit landscape environmental data were used to predict carbon stock across the state. Photo credit: Deakin University, Burwood VIC.}
 	\label{Fig:method}
 \end{figure}
@@ -103,7 +103,7 @@ The hierarchical organic carbon density model fit the data well ($R^2$ = \Sexpr{
 
 \begin{figure}[!ht]
   \centering
-	\includegraphics[width=.9\textwidth]{chapters/Chapter2_carbon/figs/s_sites_depth.png}
+	\includegraphics[width=.9\textwidth]{figs/s_sites_depth.png}
 	\caption{Predictions from organic carbon density model. (a) Depth spline with 2 standard error. (b) Variation in intercept by core for two example cores from Dereel Lagoon Wildlife Reserve. (c) Variation in shape of functional relationship with depth by site with two example sites (Dereel Lagoon WR and Ewing Morass State Wildlife Reserve).}
 	\label{Fig:depth_spline}
 \end{figure}
@@ -116,7 +116,7 @@ Cross-validated predictive performance suggests the landscape-scale model was re
 
 \begin{figure}[!ht]
   \centering
-	\includegraphics[width=.9\textwidth]{chapters/Chapter2_carbon/figs/stock_mod_variables.png}
+	\includegraphics[width=.9\textwidth]{figs/stock_mod_variables.png}
 	\caption{Predictions from soil carbon stock model for each variable included, holding the other variables at their mean value. Ticks along x-axis indicate number of datapoints. (a) Annual precipitation (mm), (b) Normalised Difference Vegetation Index, (c) Topographic Wetness Index, (d) Valley bottom flatness, (e) Water observation from space (\%), (f) Proportion of native vegetation, and (g) log catchment area ($m^2$).}
 	\label{Fig:stock_spline}
 \end{figure}
