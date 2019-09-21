@@ -5,7 +5,8 @@ calculate_stock <- function (df, mod, max_type) {
   all_stock <- lapply(sites_list, stock, df, mod, max_type)
   
   all_stock_df <- dplyr::bind_rows(all_stock) %>%
-    merge(df[,c('core', 'SITE_NAME', 'CMA_NAME', 'RESERVE_NAME', 'DATE', 'LAT', 'LON', 'C_TYPE')], 
+    merge(df[,c('core', 'SITE_NAME', 'CMA_NAME', 'RESERVE_NAME', 
+                'DATE', 'LAT', 'LON', 'C_TYPE')], 
           by = 'core') %>%
     unique()
   
@@ -57,7 +58,8 @@ stock <- function (site_core, df, model, max_type) {
   
   ci <- quantile(max.dep, c(.025, .975))
 
-  # stock_error <- sqrt(t(w) %*% exp(Xf %*% model$Vp) %*% t(Xf) %*% w) ## its standard error
+  # stock_error <- sqrt(t(w) %*% exp(Xf %*% model$Vp) %*% t(Xf) %*% w) 
+  ## its standard error
   
   return(data.frame(SITE_CODE = site,
                     core = core,
@@ -75,11 +77,16 @@ create_model_df <- function (spatial_stock_data, path = '') {
                  dissolve = TRUE) %>%
     as("SpatialPolygonsDataFrame")
   
-  ndvi <- raster::mask(raster(x = paste0(path, 'shapefiles/processed/ndvi.tif')), r)
-  temp <- raster::mask(raster(x = paste0(path, 'shapefiles/processed/meananntemp.tif')), r)
-  prec <- raster::mask(raster(x = paste0(path, 'shapefiles/processed/annprecip.tif')), r)
-  twi <- raster::mask(raster(x = paste0(path, 'shapefiles/processed/twi.tif')), r)
-  mvbf <- raster::mask(raster(x = paste0(path, 'shapefiles/processed/mvbf.tif')), r)
+  ndvi <- raster::mask(raster(x = paste0(path, 
+                                         'shapefiles/processed/ndvi.tif')), r)
+  temp <- raster::mask(raster(x = paste0(path, 
+                                         'shapefiles/processed/meananntemp.tif')), r)
+  prec <- raster::mask(raster(x = paste0(path, 
+                                         'shapefiles/processed/annprecip.tif')), r)
+  twi <- raster::mask(raster(x = paste0(path, 
+                                        'shapefiles/processed/twi.tif')), r)
+  mvbf <- raster::mask(raster(x = paste0(path, 
+                                         'shapefiles/processed/mvbf.tif')), r)
   
   # stack covariates
   covariates <- raster::stack(ndvi,
