@@ -1,0 +1,47 @@
+\section{Carbon analysis protocol}
+
+As described in \citet{carnell2018}. 
+
+Based on the protocols of \citet{baldock2013}, a Thermo Nicolet 6700 FTIR spectrometer equipped with a Pike AutoDiff automated diffuse reflectance accessory was used to obtain diffuse reflectance Fourier-transform MIR spectra for all samples across a spectral range of 8000--400 $cm^{-1}$ with a spectral resolution of 8 $cm^{-1}$. Using Unscrambler X version 10.3 software (CAMO softare, Olso, Norway), a principle component analysis (PCA) was used to visualize spectral variability across the set of 1672 samples included in this study. A Kennard-Stone Algorithm \citep{kennard1969} was used to identify 286 samples that were most representative of the spectral variability exhibited across the dataset. 
+
+The total carbon (TC), total organic carbon (TOC), total nitrogen (TN), and inorganic carbon (IC) content of all 286 samples was determined by analysing approximately 0.80 g of the dried and ground soil. High temperature (1350 $^{\circ}$C) oxidative combustion on a LECO Trumac CN analyzer was used to estimate TC and TN using lance oxygen flows and an extended purge to ensure complete combustion of carbonates. Non-calcareous samples identified based on MIR spectra (absence of reflectance peak at 2500 $cm^{-1}$) had no further analysis (TC = TOC). 
+
+Fifty-two were identified to contain inorganic carbon by the presence of a reflectance peak at 2500 $cm^{-1}$ and were labelled as calcareous. The calcaeous soils were pre-treated by addition of 1 ml of 1 M HCl to a known mass of dried and ground soil, shaken and centrifuged with the supernatant being retained for each sample. The HCl pretreatment was repeated until no further effervescence was detected. The soils were then washed three times with 50 ml of deionised water with centrifuging and collection of the supernatent between washes. After the last wash the soils were frozen, freeze dried and analysed again on the LECO trumac CN analyser. All supernatants (after 1 M HCl treatment and water washes) were accumulated for each sample and the amount of dissolved organic carbon present in the bulk supernatant was determined using a Thermalox DOC analyser. The $C_{org}$ content of the calcareous soils was determined as the total carbon measured by the LECO on the freeze dried HCl pretreated soil plus the organic carbon present in the accumulated supernatents corrected back to the orginial mass of soil that was pretreated.  
+
+The $C_{org}$ content of all 286 samples were combined with their respective MIR spectra and a partial least squares regression (PLSR) analysis was used to develop an algorithm capable of predicting $C_{org}$ content from MIR spectra. A square root tranformation was applied to the $C_{org}$ contents to correct for nonlinearity and an inhomogeneity of variance in the resultant model. A full cross validation process was used to validate the PLSR prediction algorithm derived for the square root of $C_{org}$ content. The PLSR prediction algorithm was then applied to the MIR spectra derived for all 1672 samples and the values derived for the square root of $C_{org}$ content were squared to provide values for $C_{org}$ content of the samples per \citet{bellon-maurel2010}.  
+
+\section{Supplementary figures and tables}
+
+\begin{table}[!ht]
+	\centering
+	\caption{Carbon stock generalised addivie model output.}
+	\label{apx:stock_mod}
+		\begin{tabular}{l l l l l}
+		\toprule
+\input{figs/stock_mod_table.tex}
+			\bottomrule
+			\end{tabular}
+	\end{table}
+
+\begin{figure}[!ht]
+  \centering
+	\includegraphics[width=.9\textwidth]{figs/stockmod_pairplot.png}
+	\caption{Correlations between spatial environmental variables. Size of $R^2$ listed on bottom panel proportional to weight of relationship, with star to indicate significance at P \textless 0.05.}
+	\label{apx:stockmod_pairplot}
+\end{figure}
+
+\begin{figure}[!ht]
+  \centering
+	\includegraphics[width=.7\textwidth]{figs/density_mod.png}
+	\caption{Model evaluation plots for organic carbon density model.}
+	\label{apx:density_mod}
+\end{figure}
+
+\section{Plant species composition methodology}
+
+In addition to the methods described in the chapter, I also conducted vegetation quadrat surveys at each core location. My aim was to incorporate local community-level plant structure and function into the model of carbon stock. Due to time limitations, I was unable to analyse this data to incorporate it into this study. I describe those methods here, as my future work to extend and improve this model will incorporate this data. 
+
+At each of the 5 cores collected per site, I laid down a 1 $m^2$ quadrat to estimate bare ground and species percent cover. I placed the quadrat with the core in the center, in order to reduce subjectivity in quadrat placement around the core. I could not identify most species in the field, both due to time restrictions at each site and the sheer number of species we encountered. I therefore attached a sample to an herbarium notebook and assigned a unique identifier to it. I took pictures of each quadrat from above in case the notes were lost. Although I did my best to uncover and identify submerged species, I undoubtedly missed species in sites with deep water. In many dry sites, on the other hand, we found extremely dessicated individuals that were difficult to identify. 
+
+To identify the plant samples, I used region-specific plant identification books. In many cases, though, we also had a local land guide with us on site, for example, the property manager or a Catchment Management Authority representative, who could also assist in identifying individual species. I was able to identify confidently 86 species, which covered a range of water tolerance positions in the landscape. These species corresponded to 151 of 441 unique ID's that were given to specimens in the field, as many were collected multiple times if a previous collection ID for that species was not on hand. 295 ID's remain unresolved. Although this is likely substantially fewer than 295 species, it still represented a high burden. It is likely many of these species will not be able to be identified at all, due to insufficient collection of plant parts, mispreservation of samples, or lack of available expertise, for example in the case of the wide assortment of \textit{Juncus} species we found. 
+
