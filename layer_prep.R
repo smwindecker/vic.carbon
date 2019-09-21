@@ -3,12 +3,11 @@ library(gdaltools)
 
 crs.geo <- '+proj=longlat +datum=WGS84 +no_defs'
 
-path <- 'chapters/Chapter5_carbon/'
-abs_path_raw <- paste0(getwd(), '/', path, 'shapefiles/raw/')
-abs_path_output <- paste0(getwd(), '/', path, 'shapefiles/processed/')
+abs_path_raw <- paste0(getwd(), '/shapefiles/raw/')
+abs_path_output <- paste0(getwd(), '/shapefiles/processed/')
 
-rel_path_raw <- paste0(path, 'shapefiles/raw/')
-rel_path_output <- paste0(path, 'shapefiles/processed/')
+rel_path_raw <- 'shapefiles/raw/'
+rel_path_output <- 'shapefiles/processed/'
 
 r_res <- .0025
 r_ext <- c(141, 150, -39, -33)
