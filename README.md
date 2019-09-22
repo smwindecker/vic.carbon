@@ -1,6 +1,6 @@
-<<<<<<< HEAD
-
 # Drivers of carbon storage in freshwater wetlands in Victoria
+
+[![Launch Rstudio Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/smwindecker/vic.carbon/master?urlpath=rstudio)
 
 
 ## We collected soil cores at 100 freshwater wetlands across Victoria, in order to:
