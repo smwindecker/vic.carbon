@@ -5,6 +5,10 @@ library(mgcv)
 
 R.utils::sourceDirectory('R/')
 
+# Processed spatial data files are provided in spatial/processed
+## library(gdaltools)
+## process_spatial_data()
+
 # data prep
 lab_data <- process_lab_results(lab_data = "data-raw/VWC_Lab_Results.csv")
 
