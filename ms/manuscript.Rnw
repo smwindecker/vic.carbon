@@ -94,4 +94,6 @@
 
 \bibliography{bibliography_vic_carbon,bibliography_packages}
 
+\Sexpr{knitr::knit_child('supplement.Rnw')}
+
 \end{document}
