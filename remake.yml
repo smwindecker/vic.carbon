@@ -19,7 +19,7 @@ targets:
   all:
     depends:
       - carbon_figs
-      - manuscript.pdf
+      - ms/manuscript.pdf
 
   carbon_figs:
     depends:
@@ -164,7 +164,7 @@ targets:
     
 # ------ report ---------
 
-  manuscript.tex:
+  ms/manuscript.tex:
     depends:
       - lab_data # carbon 
       - samples
@@ -185,7 +185,7 @@ targets:
     knitr: TRUE
     cleanup_level: purge
 
-  manuscript.pdf:
+  ms/manuscript.pdf:
     depends:
       - carbon_figs
-    command: pdflatex('manuscript.tex')
+    command: pdflatex('ms/manuscript.tex')
