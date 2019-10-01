@@ -31,13 +31,15 @@ method_subplot <- function (df, mod) {
           border = NA)
 }
 
-covariate_plot <- function (covariate) {
+covariate_plot <- function (covariate, file_location = '') {
   
-  r <- aggregate(shapefile('chapters/Chapter2_carbon/shapefiles/processed/cma.shp'), 
+  r <- aggregate(shapefile(paste0(file_location, 
+                                  'shapefiles/processed/cma.shp')), 
                  dissolve = TRUE) %>%
     as("SpatialPolygonsDataFrame")
-  cov <- raster(x = paste0('chapters/Chapter2_carbon/shapefiles/processed/', 
-                                 covariate, '.tif')) %>%
+  cov <- raster(x = paste0(fil_location, 
+                           'shapefiles/processed/', 
+                           covariate, '.tif')) %>%
     mask(r)
   
   plot(cov, axes = FALSE, box = FALSE, legend = FALSE)  
