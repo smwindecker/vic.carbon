@@ -48,6 +48,7 @@ cv_mod.rds
 model_df.rds
 papers/
 shapefiles/raw/
+shapefiles/old_processed/
 
 .remake/
 *.tex
