@@ -92,7 +92,7 @@
 
 \Sexpr{knitr::knit_child('body.Rnw')}
 
-\bibliography{ms/bibliography_vic_carbon,ms/bibliography_packages}
+\bibliography{ms/bibliography_thesis_2019,ms/bibliography_packages}
 
 \Sexpr{knitr::knit_child('supplement.Rnw')}
 
