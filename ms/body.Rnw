@@ -36,7 +36,7 @@ In the laboratory we extruded the soil from the replicate cores. We sliced each 
 
 We dried each 2 cm sample at 50 $^{\circ}$C for 48\textemdash72 hours and homogenised them with a stainless steel mortar and pestle (Retch RM200) before exposing them to gamma irradiation at 50 kGray for 60 hours (by Steritech, Dandenong, Victoria). This irradiation removes potential infection of \textit{Daktulosphaira vitifoliae}, since some of our samples came from known Phylloxera Infested Zones This irradiation process has been demonstrated to have no major influence on carbon measurements in soil samples (Baldock et al., unpublished data). 
 
-We sent the samples to the Commonwealth Scientific and Industrial Research Organisation (CSIRO) in South Australia for carbon analysis (a detailed summary of their protocol can be found in Appendix~\ref{apx:ch5}). CSIRO provided us with an organic carbon estimate of each sample. We estimated organic carbon density ($mg$ $cm^{-3}$) by multiplying the estimate by dry bulk density: the dry weight of sample divided by volume, in this case $\pi*2.5^2*2$ because each slice sample had a radius of 2.5 cm and a thickness of 2 cm. 
+We sent the samples to the Commonwealth Scientific and Industrial Research Organisation (CSIRO) in South Australia for carbon analysis (a detailed summary of their protocol can be found in the Supplementary materials). CSIRO provided us with an organic carbon estimate of each sample. We estimated organic carbon density ($mg$ $cm^{-3}$) by multiplying the estimate by dry bulk density: the dry weight of sample divided by volume, in this case $\pi*2.5^2*2$ because each slice sample had a radius of 2.5 cm and a thickness of 2 cm. 
 
 \subsection*{Carbon stock estimation}
 
