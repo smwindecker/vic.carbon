@@ -1,4 +1,4 @@
-FROM rocker/geospatial:3.5.1
+FROM rocker/geospatial:3.6.1
 LABEL maintainer="Saras Windecker"
 LABEL email="saras.windecker@gmail.com"
 
@@ -26,13 +26,6 @@ WORKDIR ${HOME}
 
 # ---------------------------------------------
 
-# Install extra latex style files
-
-## Saves downloading whenever tinytex runs
-## Inspired by Yihui - https://github.com/yihui/tinytex/issues/135#issuecomment-514351695
-## NB: tinytex extras installed at  /opt/TinyTeX/tlpkg/TeXLive/
-
-RUN R --quiet -e 'tinytex::tlmgr_install(c("a4wide", "algorithms", "appendix", "babel-english", "bbm-macros", "beamer", "breakurl", "catoptions", "charter", "cite", "cleveref", "colortbl", "comment", "courier", "eepic", "enumitem", "eso-pic", "eurosym", "extsizes", "fancyhdr", "floatrow", "fontaxes", "fpl", "hardwrap", "koma-script", "lastpage", "lettrine", "libertine", "lineno", "lipsum",  "ltxkeys", "ly1", "mathalpha", "mathpazo", "mathtools", "mdframed", "mdwtools", "microtype", "morefloats", "ms", "multirow", "mweights", "ncctools", "ncntrsbk", "needspace", "newtx", "ntgclass", "numname", "palatino", "pbox", "pdfpages", "pgf", "picinpar", "preprint", "preview", "psnfss", "refstyle", "roboto", "sectsty", "setspace", "siunitx", "srcltx", "standalone", "stmaryrd", "sttools", "subfig", "subfigure", "symbol", "tabu", "textcase", "threeparttable", "thumbpdf", "titlesec", "tufte-latex", "ucs", "ulem", "units", "varwidth", "vmargin", "wallpaper", "wrapfig", "xargs", "xcolor", "xstring", "xwatermark"))';
 
 # ---------------------------------------------
 
@@ -51,6 +44,6 @@ COPY ./DESCRIPTION ${HOME}
 #COPY . ${HOME}
 RUN chown -R ${NB_USER} ${HOME}
 
-RUN if [ -f DESCRIPTION ]; then R --quiet -e "options(repos = list(CRAN = 'http://mran.revolutionanalytics.com/snapshot/2018-07-02/')); devtools::install_deps()"; fi
+RUN if [ -f DESCRIPTION ]; then R --quiet -e "options(repos = list(CRAN = 'http://mran.revolutionanalytics.com/snapshot/2019-10-01/')); devtools::install_deps()"; fi
 
 # Add further custom installations as needed
