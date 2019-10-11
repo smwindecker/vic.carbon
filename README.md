@@ -29,7 +29,7 @@ To ensure long-term [computational reproducibility](https://www.britishecologica
 
 ## Material included in the repository include:
 
-- `data/`: Raw data
+- `data-raw/`: Raw data
 - `shapefiles/`: Prepared shapefiles for analysis
 - `R/`: directory containing functions used in analysis
 - `ms/`: directory containing manuscript in LaTeX and accompanying style files 

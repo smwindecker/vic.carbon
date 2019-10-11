@@ -24,7 +24,7 @@ Authors@R: c(
            family = "Macreadie",
            role = c("aut"))
            )
-Description: Repository for the paper: "Drivers of soil carbon storage in freshwater wetlands of south eastern Australia"."
+Description: Repository for the paper: "Drivers of soil carbon storage in freshwater wetlands of south eastern Australia".
 License: MIT + file LICENSE
 Depends: 
     devtools,
