@@ -128,7 +128,7 @@ targets:
       bg: transparent
 
   figs/site_map.png:
-    command: sites_map(spatial_sites, file_location = I('shapefiles/raw'))
+    command: sites_map(spatial_sites, file_location = I('shapefiles/raw'), thesis = FALSE)
     plot: 
       width: 800
       height: 800
